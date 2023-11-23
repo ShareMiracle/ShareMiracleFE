@@ -1,0 +1,64 @@
+@import url(fontawesome.css);
+
+:root {
+    /* --main-color : #f56a6a; */
+    --main-color: rgba(128, 30, 255, 1);
+    --shadow-color: rgba(139, 73, 225, 0.99);
+    --light-color: rgba(240, 230, 230, 0.7);
+    --transplant-color: rgba(245, 106, 106, 0.1);
+    --backFilter: saturate(180%) blur(10px);
+    --sideBarTransplate: rgba(255, 255, 255, 0.7);
+    --mainTransplate: rgba(255, 255, 255, 0.9);
+    --slight-light-color: rgb(255, 255, 255, 0.1);
+    --nav-layer: 10;
+    --focus-time: .3s;
+    --darkHtml: none;
+    --darkImg: none;
+    --blockquote-color: rgba(117, 117, 117, 0.9);
+    --blockquote-font: "NerdFontMono", var(--base-font), serif;
+    --base-font: "NerdFontMono";
+    --title-font: "NerdFontMono";
+    --quote-title-font-size: 0.9em;
+    --quote-tag-font-size: 1.1em;
+    --quote-lineheight: 33px;
+    --monospace-font: 'Cascadia code';
+    --sidebar-font-color: black;
+    --main-panel-font-color: black;
+    --light-font-color: rgb(127, 136, 143);
+}
+
+@font-face {
+    font-family: "Cascadia code";
+    src: url("../fonts/CascadiaCode.woff2");
+}
+
+@font-face {
+    font-family: "NerdFontMono";
+    src: url("../fonts/RobotoSlab-Regular.ttf");
+}
+
+html::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html {
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+body {
+    /* background: #ffffff; */
+    /* TODO : 为背景图片设置的锚点 */
+    /* background-image: url("https://pic3.zhimg.com/v2-b7408711f99a5dc49decc3ce0aee6ac6_r.jpg"); */
+    /* background-image: url("https://pic2.zhimg.com/v2-5c05637be3d152a4f5af38dab075b8b1_r.jpg"); */
+    /* background-image: url("https://pic1.zhimg.com/80/v2-6852d5a87a18b03248d5e79a2d481771_720w.png"); */
+    background-color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}

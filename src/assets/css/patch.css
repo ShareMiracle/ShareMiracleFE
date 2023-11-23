@@ -1,0 +1,7 @@
+/* 对于一些第三方库的覆盖 */
+
+/* 加载动画 字体大小 */
+.el-loading-text {
+    font-size: 22px !important;
+    color: var(--main-color) !important;
+}
