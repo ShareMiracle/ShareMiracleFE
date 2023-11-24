@@ -24,6 +24,8 @@ const i18n = createI18n<[MessageSchema], 'en' | 'zh'>({
 });
 
 // external css file
+import "@/assets/css/main.css";
+import "@/assets/fonts/iconfont.css";
 import "@/assets/css/thirdparty.css";
 import "@/assets/css/patch.css";
 

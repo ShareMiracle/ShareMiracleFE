@@ -1,8 +1,6 @@
-@import url(fontawesome.css);
-
 :root {
     /* --main-color : #f56a6a; */
-    --main-color: rgba(128, 30, 255, 1);
+    --main-color: #42b983;
     --shadow-color: rgba(139, 73, 225, 0.99);
     --light-color: rgba(240, 230, 230, 0.7);
     --transplant-color: rgba(245, 106, 106, 0.1);

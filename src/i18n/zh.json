@@ -4,5 +4,8 @@
     "data": "数据",
     "model": "模型",
     "visualization": "可视化",
-    "welcome title": "欢迎来到 miracle 数据库"
+    "welcome title": "欢迎来到 miracle 数据库",
+    "language": "语言",
+    "sign in": "登录",
+    "sign up": "注册"
 }
