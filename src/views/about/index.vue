@@ -5,6 +5,8 @@
             欢迎访问我们的主页
             <a href="https://miracle.ustc.edu.cn/main.htm" target="_blank" rel="noopener">miracle 主页</a>
         </div>
+        <div>
+        </div>
     </div>
 </template>
   

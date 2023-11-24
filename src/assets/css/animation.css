@@ -1,0 +1,9 @@
+.fade-animation-effect {
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -ms-transition: .5s ease;
+}
+
+.hidden {
+    visibility: hidden;
+}

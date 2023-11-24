@@ -1,33 +1,53 @@
+import { reactive } from 'vue';
+
 import en from './en.json';
 import zh from './zh.json';
+import ja from './ja.json';
+import i18n from './i18n';
 import { useI18n } from "vue-i18n";
 
 type MessageSchema = typeof en
 
-type NumberSchema = {
-    currency: {
-        style: 'currency',
-        currencyDisplay: 'symbol'
-        currency: string
-    }
+// type NumberSchema = {
+//     currency: {
+//         style: 'currency',
+//         currencyDisplay: 'symbol'
+//         currency: string
+//     }
+// }
+
+interface I18nOption {
+    locale: string
+    language: string
+    repoUrl: string
 }
 
-interface I18nSchema {
-    message: MessageSchema,
-    number: NumberSchema
-}
+const availableLanguage = reactive<{ options: I18nOption[] }>({
+    options: [
+        {
+            locale: 'zh',
+            language: "简体中文",
+            repoUrl: "https://github.com/LSTM-Kirigaya/mmd-fe/blob/main/src/i18n/zh.json"
+        },
+        {
+            locale: 'en',
+            language: "English",
+            repoUrl: "https://github.com/LSTM-Kirigaya/mmd-fe/blob/main/src/i18n/en.json"
+        },
+        {
+            locale: 'ja',
+            language: "日本語",
+            repoUrl: "https://github.com/LSTM-Kirigaya/mmd-fe/blob/main/src/i18n/ja.json"
+        }
+    ]
+});
 
-function getI18n() {
-    const { t, n } = useI18n<I18nSchema>();
-    return { t, n };
-}
 
 
 export {
     MessageSchema,
-    NumberSchema,
-    I18nSchema,
     en,
     zh,
-    getI18n
+    ja,
+    availableLanguage
 };

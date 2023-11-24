@@ -6,6 +6,90 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7617119",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "688138",
+      "name": "源代码 下游代码",
+      "font_class": "yuandaimaxiayoudaima",
+      "unicode": "e7ae",
+      "unicode_decimal": 59310
+    },
+    {
+      "icon_id": "1167160",
+      "name": "工具箱",
+      "font_class": "gongjuxiang",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "1727543",
+      "name": "310向下、展开-线性圆框",
+      "font_class": "xiangxiazhankai-xianxingyuankuang",
+      "unicode": "e8f2",
+      "unicode_decimal": 59634
+    },
+    {
+      "icon_id": "1727544",
+      "name": "310向下、展开-圆框",
+      "font_class": "xiangxiazhankai-yuankuang",
+      "unicode": "e8f3",
+      "unicode_decimal": 59635
+    },
+    {
+      "icon_id": "4936694",
+      "name": "setting-fill",
+      "font_class": "setting-fill",
+      "unicode": "e871",
+      "unicode_decimal": 59505
+    },
+    {
+      "icon_id": "7404306",
+      "name": "描述",
+      "font_class": "miaoshu",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    },
+    {
+      "icon_id": "8094217",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "10593834",
+      "name": "工具箱,辅助工具_jurassic",
+      "font_class": "jurassic_toolkit",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "11882855",
+      "name": "bg-code",
+      "font_class": "bg-code",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "975296",
+      "name": "注册",
+      "font_class": "zhuce",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "577365",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e752",
+      "unicode_decimal": 59218
+    },
+    {
       "icon_id": "975307",
       "name": "登录",
       "font_class": "denglu",

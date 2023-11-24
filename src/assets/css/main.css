@@ -1,6 +1,7 @@
 :root {
     /* --main-color : #f56a6a; */
     --main-color: #42b983;
+    --main-fill-color: rgb(16, 16, 16);
     --shadow-color: rgba(139, 73, 225, 0.99);
     --light-color: rgba(240, 230, 230, 0.7);
     --transplant-color: rgba(245, 106, 106, 0.1);
@@ -35,16 +36,19 @@
     src: url("../fonts/RobotoSlab-Regular.ttf");
 }
 
+
 html::-webkit-scrollbar {
-    display: none;
-  }
-  
-  html {
-    scrollbar-width: none; /* firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(0, 0, 0, 0.1);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-fill-color);
+}
+
 
 body {
     /* background: #ffffff; */
@@ -59,4 +63,45 @@ body {
     -webkit-background-size: cover;
     -o-background-size: cover;
     background-position: center 0;
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+    background-color: var(--main-color);
+    box-shadow: none;
+    color: #ffffff !important;
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover {
+    background-color: var(--main-color);
+    opacity: 0.9;
+}
+
+input[type="submit"].primary:active,
+input[type="reset"].primary:active,
+input[type="button"].primary:active,
+button.primary:active,
+.button.primary:active {
+    background-color: var(--main-color);
+    opacity: 0.6;
+}
+
+div,
+span,
+button,
+a {
+    font-family: var(--base-font);
 }
