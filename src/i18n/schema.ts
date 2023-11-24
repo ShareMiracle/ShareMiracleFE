@@ -3,8 +3,6 @@ import { reactive } from 'vue';
 import en from './en.json';
 import zh from './zh.json';
 import ja from './ja.json';
-import i18n from './i18n';
-import { useI18n } from "vue-i18n";
 
 type MessageSchema = typeof en
 

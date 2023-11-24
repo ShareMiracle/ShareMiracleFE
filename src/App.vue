@@ -34,9 +34,7 @@
             &ensp;
             <hr />
             &ensp;
-            <button class="iconfont icon-in nav-i18n fade-animation-effect"
-            aria-expanded="false"
-            >
+            <button class="iconfont icon-in nav-i18n fade-animation-effect">
                 &ensp; {{ t("language") }}
                 <div class="i18n-list">
                     <div
