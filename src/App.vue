@@ -5,14 +5,8 @@
             &ensp;
             <hr />
             &ensp;
-            <router-link
-                class="nav-router-item"
-                v-for="(item, index) in menuLinks.data"
-                :key="index"
-                :to="item.path"
-            >
-                <span class="nav-tag fade-animation-effect" :class="item.icon"
-                    >&ensp; {{ t(item.text) }}
+            <router-link class="nav-router-item" v-for="(item, index) in menuLinks.data" :key="index" :to="item.path">
+                <span class="nav-tag fade-animation-effect" :class="item.icon">&ensp; {{ t(item.text) }}
                 </span>
             </router-link>
         </div>
@@ -22,43 +16,39 @@
             &emsp;
             <hr />
             &emsp;
-            <span class="iconfont icon-denglu nav-sign-in fade-animation-effect"
-                >&ensp;{{ t("sign in") }}</span
-            >
+            <span class="iconfont icon-denglu nav-sign-in fade-animation-effect">&ensp;{{ t("sign in") }}</span>
             &ensp;
-            <button
-                class="iconfont icon-zhuce nav-sign-up fade-animation-effect"
-            >
+            <button class="iconfont icon-zhuce nav-sign-up fade-animation-effect">
                 &ensp;{{ t("sign up") }}
             </button>
             &ensp;
             <hr />
             &ensp;
-            <button class="iconfont icon-in nav-i18n fade-animation-effect">
-                &ensp; {{ t("language") }}
-                <div class="i18n-list">
-                    <div
-                        class="i18n-item-wrapper"
-                        v-for="option in availableLanguage.options"
-                        :key="option.language"
-                    >
+
+            <floatWindow 
+                :content-class="'i18n-list'"
+                :animation="'main-fade'"
+            >
+                <template #header>
+                    <div class="iconfont icon-in nav-i18n">
+                        &ensp; {{ t("language") }}
+                    </div>
+                </template>
+                <template #content>
+                    <div class="i18n-item-wrapper" v-for="option in availableLanguage.options" :key="option.language">
                         <div class="i18n-item">
                             <div @click="changeLanguage(option.locale)">
                                 {{ option.language }}
                             </div>
-                            <a
-                                class="iconfont icon-github"
-                                :href="option.repoUrl"
-                                target="_blank"
-                            ></a>
+                            <a class="iconfont icon-github" :href="option.repoUrl" target="_blank"></a>
                         </div>
                         <hr />
                     </div>
                     <div class="i18n-translate-for-us">
                         {{ t("translate for us") }}
                     </div>
-                </div>
-            </button>
+                </template>
+            </floatWindow>
         </div>
     </nav>
     <div id="main">
@@ -73,11 +63,12 @@
 <script setup lang="ts">
 /*Documents and Settings
 这里既是首页，也是上侧导航栏的位置
-
 */
 
 import { onMounted, reactive } from "vue";
 import { useI18n } from "vue-i18n";
+
+import floatWindow from "./components/float-window.vue";
 
 // import { ElLoading } from "element-plus";
 import * as initialise from "@/hook/initialize/App";
@@ -142,9 +133,5 @@ onMounted(async () => {
 
 #router-wrapper {
     margin-top: var(--nav-height);
-}
-
-div {
-    height: 100px;
 }
 </style>

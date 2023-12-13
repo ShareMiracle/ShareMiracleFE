@@ -13,15 +13,11 @@ nav {
     margin: 0 auto;
     justify-content: space-between;
     background: white;
-    box-shadow: 6px 3px 5px 2px rgba(10, 10, 10, 0.2);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
     width: 98.5%;
     transition: .3s ease;
     -webkit-transition: .3s ease;
     -ms-transition: .3s ease;
-}
-
-nav:hover {
-    box-shadow: 7px 5px 5px 2px rgba(10, 10, 10, 0.4);
 }
 
 nav a {
@@ -105,11 +101,8 @@ nav a.router-link-exact-active {
 }
 
 .i18n-list {
-    position: absolute;
-    top: calc(var(--nav-height) - 25px);
+    top: calc(var(--nav-height) - 25px); 
     right: 25px;
-    width: fit-content;
-    height: fit-content;
     padding: 10px;
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -135,7 +128,7 @@ nav a.router-link-exact-active {
 .i18n-item div {
     border-radius: .6em;
     height: fit-content;
-    padding: 5px 8px;
+    padding: 8px 8px;
     margin: 5px 12px;
     cursor: pointer;
     transition: .3s ease;
