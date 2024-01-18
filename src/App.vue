@@ -129,9 +129,17 @@ onMounted(async () => {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+    min-height: 2000px;
 }
 
 #router-wrapper {
     margin-top: var(--nav-height);
+    display: flex;
+    justify-content: center;
 }
+
+.main {
+    min-height: 2000px;
+}
+
 </style>
