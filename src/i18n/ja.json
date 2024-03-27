@@ -7,7 +7,9 @@
     "welcome title": "歓迎いたします、 Miracle データプラットフォームへ！",
     "welcome content": "当研究室のデータサーバーであるMiracleは、多様な医療データのダウンロード、可視化、一般的な処理サービスを提供する多機能なプラットフォームです。研究者や医療関係者のニーズに応えるように設計され、Miracleはユーザーフレンドリーなインターフェースとシームレスなデータ探索と利用のための堅牢な機能セットを提供しています。",
     "language": "言語",
-    "sign in": "サインイン",
-    "sign up": "サインアップ",
-    "translate for us": "翻訳中に問題がある場合は、github で通知してください！"
+    "login.sign-in": "サインイン",
+    "login.sign-up": "サインアップ",
+    "translate for us": "翻訳中に問題がある場合は、github で通知してください！",
+    "login.username": "username",
+    "login.password": "password"
 }

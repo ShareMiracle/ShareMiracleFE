@@ -7,7 +7,9 @@
     "welcome title": "Welcome to Miracle Data Platform!",
     "welcome content": "Our laboratory's data server, named Miracle, is a versatile platform dedicated to providing diverse medical data download, visualization, and general processing services. Designed to meet the needs of researchers and professionals in the medical field, Miracle offers a user-friendly interface and a robust set of features for seamless data exploration and utilization.",
     "language": "language",
-    "sign in": "sign in",
-    "sign up": "sign up",
-    "translate for us": "If there are anything wrong in translation, please inform us in github!"
+    "login.sign-in": "sign in",
+    "login.sign-up": "sign up",
+    "translate for us": "If there are anything wrong in translation, please inform us in github!",
+    "login.username": "username",
+    "login.password": "password"
 }

@@ -20,14 +20,14 @@
                 class="iconfont icon-denglu nav-sign-in"
                 @click="router.push('/sign-in')"
             >
-                &ensp;{{ t("sign in") }}
+                &ensp;{{ t("login.sign-in") }}
             </button>
             &ensp;
             <button
                 class="iconfont icon-zhuce nav-sign-up"
                 @click="router.push('/sign-up')"
             >
-                &ensp;{{ t("sign up") }}
+                &ensp;{{ t("login.sign-up") }}
             </button>
             &ensp;
             <hr />
