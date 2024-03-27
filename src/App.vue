@@ -6,7 +6,7 @@
             <hr />
             &ensp;
             <router-link class="nav-router-item" v-for="(item, index) in menuLinks.data" :key="index" :to="item.path">
-                <span class="nav-tag fade-animation-effect" :class="item.icon">&ensp; {{ t(item.text) }}
+                <span class="nav-tag" :class="item.icon">&ensp; {{ t(item.text) }}
                 </span>
             </router-link>
         </div>
@@ -16,9 +16,17 @@
             &emsp;
             <hr />
             &emsp;
-            <span class="iconfont icon-denglu nav-sign-in fade-animation-effect">&ensp;{{ t("sign in") }}</span>
+            <button
+                class="iconfont icon-denglu nav-sign-in"
+                @click="router.push('/sign-in')"
+            >
+                &ensp;{{ t("sign in") }}
+            </button>
             &ensp;
-            <button class="iconfont icon-zhuce nav-sign-up fade-animation-effect">
+            <button
+                class="iconfont icon-zhuce nav-sign-up"
+                @click="router.push('/sign-up')"
+            >
                 &ensp;{{ t("sign up") }}
             </button>
             &ensp;
@@ -56,6 +64,7 @@
             <router-view />
         </div>
     </div>
+
 </template>
 
 
@@ -65,16 +74,18 @@
 这里既是首页，也是上侧导航栏的位置
 */
 
-import { onMounted, reactive } from "vue";
+import { reactive, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 import { useI18n } from "vue-i18n";
 
-import floatWindow from "./components/float-window.vue";
-
+// import floatWindow from "./components/float-window.vue";
 // import { ElLoading } from "element-plus";
+
 import * as initialise from "@/hook/initialize/App";
 import { availableLanguage } from "@/i18n/schema";
 
 const { t, locale } = useI18n();
+const router = useRouter();
 
 interface RouteLinks {
     path: string;
@@ -123,6 +134,7 @@ onMounted(async () => {
 
 <style>
 @import url(./assets/css/nav.css);
+@import url(./assets/css/login.css);
 
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
