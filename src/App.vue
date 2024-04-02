@@ -61,7 +61,11 @@
     </nav>
     <div id="main">
         <div id="router-wrapper">
-            <router-view />
+            <router-view v-slot="{ Component }">
+                <transition name="main-fade" mode="out-in">
+                    <component :is="Component" />
+                </transition>
+            </router-view>
         </div>
     </div>
 
@@ -78,7 +82,7 @@ import { reactive, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from "vue-i18n";
 
-// import floatWindow from "./components/float-window.vue";
+import floatWindow from "./components/float-window.vue";
 // import { ElLoading } from "element-plus";
 
 import * as initialise from "@/hook/initialize/App";
@@ -153,5 +157,7 @@ onMounted(async () => {
 .main {
     min-height: 2000px;
 }
+
+
 
 </style>

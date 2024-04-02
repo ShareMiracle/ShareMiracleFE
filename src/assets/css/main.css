@@ -1,6 +1,7 @@
 :root {
     /* --main-color : #f56a6a; */
-    --main-color: #42b983;
+    /* --main-color: #42b983; */
+    --main-color: rgb(16, 16, 16);
     --main-fill-color: rgb(16, 16, 16);
     --shadow-color: rgba(139, 73, 225, 0.99);
     --light-color: rgba(240, 230, 230, 0.7);

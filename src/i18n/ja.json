@@ -10,6 +10,14 @@
     "login.sign-in": "サインイン",
     "login.sign-up": "サインアップ",
     "translate for us": "翻訳中に問題がある場合は、github で通知してください！",
-    "login.username": "username",
-    "login.password": "password"
+    "login.username": "ユーザー名",  
+    "login.password": "パスワード",  
+    "login.repeatPassword": "パスワード再入力",  
+    "login.password.validate.error.length": "パスワードは8文字以上でなければなりません",  
+    "login.password.validate.error.uppercase": "パスワードは大文字を含む必要があります",  
+    "login.password.validate.error.lowercase": "パスワードは小文字を含む必要があります",  
+    "login.password.validate.error.number": "パスワードは数字を含む必要があります",  
+    "login.email-address": "電子メールアドレス",  
+    "login.email-address.validate.error.invalid-address": "無効な電子メールアドレス",  
+    "login.repeatPassword.validate": "確認用のパスワードはパスワードと一致しなければなりません" 
 }

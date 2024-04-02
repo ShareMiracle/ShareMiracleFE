@@ -1,2 +1,12 @@
 /* 引入第三方库 */
 @import url(https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.3/index.min.css);
+
+:root {
+    --el-color-primary: var(--main-color);
+    --el-color-primary-light-3: #343436;
+    --el-color-primary-light-5: #2d2d2f;
+    --el-color-primary-light-7: #393a3c;
+    --el-color-primary-light-8: #6b6d71;
+    --el-color-primary-light-9: #a6a9ad;
+    --el-color-primary-dark-2: var(--main-color);
+}

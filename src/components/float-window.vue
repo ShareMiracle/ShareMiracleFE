@@ -25,14 +25,7 @@
 
 <script setup lang="ts">
 import { defineProps, withDefaults, reactive } from 'vue';
-
-interface FloatWindowProps {
-    buttonClass?: string
-    headerClass?: string
-    contentClass?: string
-    hiddeDelay?: number
-    animation?: string
-}
+import type { FloatWindowProps } from '@/types';
 
 const props = withDefaults(defineProps<FloatWindowProps>(), {
     buttonClass: 'float-window-button',

@@ -11,5 +11,13 @@
     "login.sign-up": "sign up",
     "translate for us": "If there are anything wrong in translation, please inform us in github!",
     "login.username": "username",
-    "login.password": "password"
+    "login.password": "password",
+    "login.repeatPassword": "repeat password",
+    "login.password.validate.error.length": "The password must contain at least 8 characters",
+    "login.password.validate.error.uppercase": "The password must contain uppercase letters",
+    "login.password.validate.error.lowercase": "The password must contain lowercase letters",
+    "login.password.validate.error.number": "The password must contain numbers",
+    "login.email-address": "Email Address",
+    "login.email-address.validate.error.invalid-address": "Invalid email address",
+    "login.repeatPassword.validate": "The confirmed password must be the same as the password"
 }
