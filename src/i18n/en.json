@@ -19,5 +19,12 @@
     "login.password.validate.error.number": "The password must contain numbers",
     "login.email-address": "Email Address",
     "login.email-address.validate.error.invalid-address": "Invalid email address",
-    "login.repeatPassword.validate": "The confirmed password must be the same as the password"
+    "login.repeatPassword.validate": "The confirmed password must be the same as the password",
+    "login.error.message": "账号或者密码错误",
+    "login.error.empty": "请填入账号密码",
+    "login.title.sign-up": "没有账号？点击注册",
+    "login.title.forget-password": "忘记密码？",
+    "user.name": "姓名/昵称",
+    "signup.error.incorrect-item": "您仍然有不符合要求的信息没有填写完成，请根据错误信息完成填写。",
+    "signup.error.empty": "请完善注册信息。"
 }

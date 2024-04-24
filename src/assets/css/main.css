@@ -3,6 +3,7 @@
     /* --main-color: #42b983; */
     --main-color: rgb(16, 16, 16);
     --main-fill-color: rgb(16, 16, 16);
+    --main-border-color: rgb(76, 76, 76);
     --shadow-color: rgba(139, 73, 225, 0.99);
     --light-color: rgba(240, 230, 230, 0.7);
     --transplant-color: rgba(245, 106, 106, 0.1);
@@ -25,6 +26,15 @@
     --sidebar-font-color: black;
     --main-panel-font-color: black;
     --light-font-color: rgb(127, 136, 143);
+
+    --animation-7s: .7s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-5s: .5s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-3s: .35s cubic-bezier(0.23, 1, 0.32, 1);
+    --gray-box-shadow-0: 0 0 8px 3px rgba(182, 181, 182, 0.9);
+
+    --error-border-color: rgb(254, 226, 226);
+    --error-bg-color: rgb(254, 242, 242);
+    --error-font-color: rgb(147, 33, 33);
 }
 
 @font-face {

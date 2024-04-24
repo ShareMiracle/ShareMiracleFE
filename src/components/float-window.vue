@@ -24,15 +24,29 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, withDefaults, reactive } from 'vue';
-import type { FloatWindowProps } from '@/types';
+import { defineProps, reactive } from 'vue';
 
-const props = withDefaults(defineProps<FloatWindowProps>(), {
-    buttonClass: 'float-window-button',
-    headerClass: 'float-window-header',
-    contentClass: 'float-window-content',
-    hiddeDelay: 300,
-    animation: 'main-fade'
+const props = defineProps({
+    buttonClass: {
+        type: String,
+        default: 'float-window-button'
+    },
+    headerClass: {
+        type: String,
+        default: 'float-window-header'
+    },
+    contentClass: {
+        type: String,
+        default: 'float-window-content'
+    },
+    hiddenDelay: {
+        type: Number,
+        default: 300 
+    },
+    animation: {
+        type: String,
+        default: 'main-fade'
+    }
 });
 
 // acquire handle of elements
@@ -52,7 +66,7 @@ const contentController = reactive({
     hide() {
         this.hideTimerID = setTimeout(() => {
             this.hidden = true;
-        }, props.hiddeDelay);
+        }, props.hiddenDelay);
     }
 });
 

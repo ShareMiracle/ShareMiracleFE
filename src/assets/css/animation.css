@@ -4,9 +4,9 @@
 }
 
 .fade-animation-effect {
-    transition: var(--fade-during) ease;
-    -webkit-transition: var(--fade-during) ease;
-    -ms-transition: var(--fade-during) ease;
+    transition: var(--animation-5s);
+    -webkit-transition: var(--animation-5s);
+    -ms-transition: var(--animation-5s);
 }
 
 .easy-hidden {

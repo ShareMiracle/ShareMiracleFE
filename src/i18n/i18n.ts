@@ -7,7 +7,7 @@ type MessageSchema = typeof en
 
 const i18n = createI18n<[MessageSchema], 'en' | 'zh' | 'ja'>({
     legacy: false,
-    locale: 'en',
+    locale: 'zh',
     // globalInjection: true,
     messages: { en, zh, ja }
 });

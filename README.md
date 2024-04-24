@@ -1,24 +1,34 @@
-# mmd-fe
+# mmd-fe (multimodal medical database front-end)
 
-## Project setup
-```
-npm install
+## 项目运行
+
+安装：
+
+```bash
+npm i
 ```
 
-### Compiles and hot-reloads for development
-```
+运行：
+
+```bash
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 项目结构
 
-### Lints and fixes files
 ```
-npm run lint
+src
+├─📁api         后端 API
+├─📁assets      静态资源
+│  ├─📁css      层叠样式表
+│  ├─📁fonts    字体
+│  └─📁image    图像
+├─📁components  自定义全局通用组件
+├─📁hook        自定义函数库
+├─📁i18n        多语言配置
+├─📁mock        mock数据配置
+├─📁router      路由
+├─📁store       状态库
+├─📁types       全局自定义 type
+└─📁views       路由组件
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

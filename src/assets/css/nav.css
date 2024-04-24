@@ -55,9 +55,8 @@ nav a.router-link-exact-active {
 }
 
 .nav-sign-in {
-    margin: 2px 2px;
     border-radius: .6em;
-    padding: var(--nav-block-padding);
+    padding: calc(var(--nav-block-padding) - 1px);
     cursor: pointer;
 }
 
@@ -67,9 +66,8 @@ nav a.router-link-exact-active {
 }
 
 .nav-sign-up {
-    margin: 0 2px;
     border-radius: .6em;
-    border: var(--main-fill-color) solid 2px;
+    border: var(--main-border-color) solid 1.5px;
     background-color: rgb(248, 248, 248);
     padding: calc(var(--nav-block-padding) - 1px);
     cursor: pointer;

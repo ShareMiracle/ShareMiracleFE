@@ -33,7 +33,7 @@
             <hr />
             &ensp;
 
-            <floatWindow 
+            <float-window 
                 :content-class="'i18n-list'"
                 :animation="'main-fade'"
             >
@@ -56,7 +56,7 @@
                         {{ t("translate for us") }}
                     </div>
                 </template>
-            </floatWindow>
+            </float-window>
         </div>
     </nav>
     <div id="main">
@@ -82,7 +82,7 @@ import { reactive, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from "vue-i18n";
 
-import floatWindow from "./components/float-window.vue";
+import floatWindow from "@/components/float-window.vue";
 // import { ElLoading } from "element-plus";
 
 import * as initialise from "@/hook/initialize/App";

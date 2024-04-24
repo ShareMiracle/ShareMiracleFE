@@ -9,7 +9,23 @@
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
     border-radius: .5em;
     padding: 10px 20px;
-    width: 45%;
+    width: 26rem;
     min-width: 300px;
     max-width: 680px;
+}
+
+.login-title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.error-message-container {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--error-border-color);
+    border-radius: .5em;
+    background-color: var(--error-bg-color);
+    color: var(--error-font-color);
 }
