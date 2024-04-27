@@ -62,14 +62,16 @@ import type { SignUpForm } from '@/types';
 
 import { reactive } from 'vue';
 import { useI18n } from "vue-i18n";
+import { useRouter } from 'vue-router';
 
-import type { FormRules } from 'element-plus';
+import { ElNotification, type FormRules } from 'element-plus';
 import type { InternalRuleItem } from 'async-validator';
 
-import { validateEmailAddress, validatePassword } from '@/hook/utils/validate';
-import { apiUserRegister } from '@/api/user';
+import { apiUserRegister, apiValidEmail } from '@/api/user';
+import { reqUserLogin } from '@/store/user';
 
 const { t } = useI18n();
+const router = useRouter();
 
 const signUpForm = reactive({
     emailAddress: '',
@@ -98,9 +100,29 @@ const signUpForm = reactive({
             password: this.password
         });
 
-        
+        const res = axiosRes.data;
+        if (res.msg === 'signup.success') {
+            this.loginAndGotoHome();
+        } else if (res.msg) {
+            this.errorInfo = t(res.msg);
+        }
+    },
+
+    async loginAndGotoHome() {
+        const res = await reqUserLogin({
+            username: this.emailAddress,
+            password: this.password
+        });
+        if (res.msg === 'login.success') {
+            router.push('/home');
+            ElNotification({
+                title: t('signup.success'),
+                message: t('greet.welcome-back') + ', '
+            });
+        }
     }
 });
+
 
 async function validateRepeatPassword(rule: InternalRuleItem, value: string, callback: (error?: string | Error) => void) {
     if (signUpForm.password !== value) {
@@ -108,23 +130,57 @@ async function validateRepeatPassword(rule: InternalRuleItem, value: string, cal
     }
 }
 
+
+async function validateName(rule: InternalRuleItem, value: string, callback: (error?: string | Error) => void) {
+    if (value.length === 0) {
+        callback(new Error(t('signup.name.empty')));
+    }
+}
+
+
+async function validateEmailAddress(rule: InternalRuleItem, value: string, callback: (error?: string | Error) => void) {    
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        callback(new Error(t('login.email-address.validate.error.invalid-address')));
+    } else {
+        const res = (await apiValidEmail({ email: value })).data;
+        if (!res.data && res.msg) {
+            callback(new Error(t(res.msg)));
+        }
+    }
+}
+
+
+async function validatePassword(rule: InternalRuleItem, value: string, callback: (error?: string | Error) => void) {    
+    if (value.length < 8) {
+        callback(new Error(t('login.password.validate.error.length')));
+    } else if (!/[A-Z]/.test(value)) {
+        callback(new Error(t('login.password.validate.error.uppercase')));
+    } else if (!/[a-z]/.test(value)) {
+        callback(new Error(t('login.password.validate.error.lowercase')));
+    } else if (!/\d/.test(value)) {
+        callback(new Error(t('login.password.validate.error.number')));
+    }
+}
+
+
 const rules = reactive<FormRules<SignUpForm>>({
     emailAddress: {
         asyncValidator: validateEmailAddress,
-        trigger: 'change'
+        trigger: 'blur'
+    },
+    name: {
+        asyncValidator: validateName,
+        trigger: 'blur'
     },
     password: [{
         asyncValidator: validatePassword,
-        trigger: 'change'
+        trigger: 'blur'
     }],
     repeatPassword: [{
         asyncValidator: validateRepeatPassword,
-        trigger: 'change'
+        trigger: 'blur'
     }]
 });
-
-
-
 
 </script>
 

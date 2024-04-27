@@ -58,9 +58,7 @@ const contentController = reactive({
         this.hidden = false;
         if (this.hideTimerID != -1) {
             clearInterval(this.hideTimerID);
-            this.hideTimerID = -1;
-            console.log(props.contentClass);
-            
+            this.hideTimerID = -1;            
         }
     },
     hide() {

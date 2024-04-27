@@ -10,7 +10,7 @@ interface CommonResponse<T> {
 
 type EmptyObject = Record<string, any>;
 
-export const apiUserLogin = (req: apiUserLoginRequest) => r<CommonResponse<apiGetUserByPageData>>({
+export const apiUserLogin = (req: apiUserLoginRequest) => r<CommonResponse<apiUserLoginData>>({
     url: '/user/login', method: 'POST',
     data: req
 });
@@ -51,6 +51,11 @@ export const apiEnableUserAccount = (req: apiEnableUserAccountRequest) => r<Comm
 export const apiUserModifyPassword = (req: apiUserModifyPasswordRequest) => r<CommonResponse<apiUserModifyPasswordData>>({
     url: '/user/editPassword', method: 'PUT',
     data: req
+});
+
+export const apiValidEmail = (req: apiValidEmailRequest) => r<CommonResponse<apiValidEmailData>>({
+    url: '/user/validEmail', method: 'GET',
+    params: req
 });
 
 // usage: CommonResponse<reqUserLoginData> as the return type of reqUserLogin
@@ -183,3 +188,9 @@ export interface apiUserModifyPasswordRequest {
 }
 
 export type apiUserModifyPasswordData = string;
+
+export interface apiValidEmailRequest {
+    email: string;
+}
+
+export type apiValidEmailData = boolean;

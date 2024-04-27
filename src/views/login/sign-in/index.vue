@@ -62,7 +62,7 @@ import { useRouter } from 'vue-router';
 
 
 import { apiUserLogin } from '@/api/user';
-import { UserStatus } from '@/store/global';
+import { UserStatus, reqUserLogin } from '@/store/user';
 import { ElNotification } from 'element-plus';
 
 
@@ -83,22 +83,22 @@ const signInForm = reactive({
             return;
         }
 
-        const axiosRes = await apiUserLogin({
+        const res = await reqUserLogin({
             username: this.emailAddress,
             password: this.password
         });
-        const res = axiosRes.data;
-        if (res.data === null) {
-            this.errorInfo = t('login.error.message');
-        } else {
-            ElNotification({ title: '', message: '' });
+        if (res.msg === 'login.success') {
+            router.push('/home');
+            ElNotification({
+                title: t('signup.success'),
+                message: t('greet.welcome-back') + ', ' + UserStatus.name
+            });
         }
     }
 });
 
 
 </script>
-
 <style>
 .sign-in-wrapper {
     padding: 10px;
