@@ -58,6 +58,10 @@ export const apiValidEmail = (req: apiValidEmailRequest) => r<CommonResponse<api
     params: req
 });
 
+export const apiUserInfo = () => r<CommonResponse<apiUserInfoData>>({
+    url: '/user/userInfo', method: 'GET'
+});
+
 // usage: CommonResponse<reqUserLoginData> as the return type of reqUserLogin
 
 export interface apiUserLoginRequest {
@@ -194,3 +198,11 @@ export interface apiValidEmailRequest {
 }
 
 export type apiValidEmailData = boolean;
+
+export type apiUserInfoData = {
+    id: number;
+    name: string;
+    email: string;
+    logoUrl: string;
+    token: string;
+};

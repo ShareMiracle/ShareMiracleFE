@@ -1,7 +1,7 @@
 <template>
     <float-window 
         :content-class="'i18n-list'"
-        :animation="'main-fade'"
+        :animation="'collapse-from-top'"
     >
         <template #header>
             <div class="iconfont icon-in nav-i18n">
@@ -84,7 +84,7 @@ async function changeLanguage(langID: string) {
     padding: 10px;
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    border-radius: .9em;
+    border-radius: .7em;
 }
 
 .i18n-list span {

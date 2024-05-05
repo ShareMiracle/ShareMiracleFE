@@ -1,7 +1,8 @@
 <template>
     <div class="miracle-login-wrapper">
         <button
-            class="iconfont icon-denglu nav-sign-in"
+            class="iconfont icon-signin nav-sign-in"
+            :style="signInStyle"
             @click="router.push('/sign-in')"
         >
             &ensp;{{ t("login.sign-in") }}
@@ -10,7 +11,8 @@
         &ensp;
         
         <button
-            class="iconfont icon-zhuce nav-sign-up"
+            class="iconfont icon-signup nav-sign-up"
+            :style="signUpStyle"
             @click="router.push('/sign-up')"
         >
             &ensp;{{ t("login.sign-up") }}
@@ -19,29 +21,30 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from "vue-i18n";
-
-import { UserStatus, reqUserLogin } from '@/store/user';
-import { ElNotification } from 'element-plus';
 
 const { t } = useI18n();
 const router = useRouter();
 
+const signInStyle = computed(() => (
+router.currentRoute.value.path === '/sign-in' ? 
+{
+    color: 'white',
+    backgroundColor: 'var(--main-fill-color)',
+    border: 'var(--main-fill-color) solid 1.5px'
+} : {
+    border: 'white solid 1.5px'
+}));
 
-// 挂载后先进行登录
-onMounted(async () => {
-    const res = await reqUserLogin({});
-    if (res.msg === 'login.success') {
-        ElNotification({
-            title: t('signup.success'),
-            message: t('greet.welcome-back') + ', ' + UserStatus.name,
-            duration: 10000
-        });
-    }
-});
-
+const signUpStyle = computed(() => (
+router.currentRoute.value.path === '/sign-up' ? 
+{
+    color: 'white',
+    backgroundColor: 'var(--main-fill-color)',
+    border: 'var(--main-fill-color) solid 1.5px'
+} : {}));
 
 </script>
 
@@ -51,11 +54,13 @@ onMounted(async () => {
     border-radius: .6em;
     padding: calc(var(--nav-block-padding) - 1px);
     cursor: pointer;
+    transition: var(--animation-3s);
 }
 
 .nav-sign-in:hover {
     color: white;
     background-color: var(--main-fill-color);
+    transition: var(--animation-3s);
 }
 
 .nav-sign-up {
@@ -65,11 +70,13 @@ onMounted(async () => {
     background-color: rgb(248, 248, 248);
     padding: calc(var(--nav-block-padding) - 1px);
     cursor: pointer;
+    transition: var(--animation-3s);
 }
 
 .nav-sign-up:hover {
     color: white;
     background-color: var(--main-fill-color);
+    transition: var(--animation-3s);
 }
 
 .miracle-login-wrapper {

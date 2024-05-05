@@ -20,7 +20,6 @@
                 <el-form-item
                     :label="t('login.email-address')"
                     prop="emailAddress"
-
                 >
                     <el-input v-model="signInForm.emailAddress"
                     ></el-input>
@@ -60,10 +59,10 @@ import { reactive, defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 
-
-import { apiUserLogin } from '@/api/user';
-import { UserStatus, reqUserLogin } from '@/store/user';
 import { ElNotification } from 'element-plus';
+
+import { KLoading } from '@/hook/utils/window';
+import { UserStatus, reqUserLogin } from '@/store/user';
 
 
 defineComponent({ name: 'sign-in' });
@@ -77,20 +76,27 @@ const signInForm = reactive({
     errorInfo: '',
     async login() {
         this.errorInfo = '';
-
+        
         if (this.emailAddress.length === 0 || this.password.length === 0) {
             this.errorInfo = t('login.error.empty');
             return;
         }
 
+        const loading = new KLoading({
+            background: "rgba(0, 0, 0, 0.75)"
+        });
         const res = await reqUserLogin({
             username: this.emailAddress,
             password: this.password
         });
-        if (res.msg === 'login.success') {
+        loading.close();
+
+        if (res?.data === null && res.msg) {
+            this.errorInfo = t(res.msg);
+        } else if (res?.msg === 'login.success') {
             router.push('/home');
             ElNotification({
-                title: t('signup.success'),
+                title: t(res.msg),
                 message: t('greet.welcome-back') + ', ' + UserStatus.name
             });
         }

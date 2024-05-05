@@ -1,32 +1,65 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4343986 */
-  src: url('iconfont.woff2?t=1700816019813') format('woff2');
+  src: url('iconfont.woff2?t=1714761878801') format('woff2');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
+  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-project:before {
+  content: "\e63d";
+}
+
+.icon-setting:before {
+  content: "\e605";
+}
+
+.icon-logout:before {
+  content: "\e609";
+}
+
+.icon-organization:before {
+  content: "\e6a1";
+}
+
+.icon-password:before {
+  content: "\e60a";
+}
+
+.icon-account:before {
+  content: "\e655";
+}
+
+.icon-collection:before {
+  content: "\e6ea";
+}
+
+.icon-mail:before {
+  content: "\e64f";
 }
 
 .icon-github:before {
   content: "\e600";
 }
 
-.icon-yuandaimaxiayoudaima:before {
+.icon-code:before {
   content: "\e7ae";
 }
 
-.icon-gongjuxiang:before {
+.icon-tools:before {
   content: "\e62f";
 }
 
-.icon-xiangxiazhankai-xianxingyuankuang:before {
+.icon-down-arrow:before {
   content: "\e8f2";
 }
 
-.icon-xiangxiazhankai-yuankuang:before {
+.icon-down-arrow-fill:before {
   content: "\e8f3";
 }
 
@@ -34,11 +67,11 @@
   content: "\e871";
 }
 
-.icon-miaoshu:before {
+.icon-description:before {
   content: "\e775";
 }
 
-.icon-tongji:before {
+.icon-statistic:before {
   content: "\e64d";
 }
 
@@ -50,15 +83,15 @@
   content: "\e63b";
 }
 
-.icon-zhuce:before {
+.icon-signup:before {
   content: "\e62d";
 }
 
-.icon-sousuo:before {
+.icon-search:before {
   content: "\e752";
 }
 
-.icon-denglu:before {
+.icon-signin:before {
   content: "\e62e";
 }
 
@@ -66,23 +99,23 @@
   content: "\e669";
 }
 
-.icon-data:before {
+.icon-visualization:before {
   content: "\e65c";
 }
 
-.icon-data1:before {
+.icon-data:before {
   content: "\e60e";
 }
 
-.icon-contactus:before {
+.icon-about-us:before {
   content: "\e608";
 }
 
-.icon-Home:before {
+.icon-home:before {
   content: "\e62a";
 }
 
-.icon-moxing:before {
+.icon-model:before {
   content: "\e708";
 }
 

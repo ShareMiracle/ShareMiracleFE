@@ -36,6 +36,31 @@ const routes: Array<RouteRecordRaw> = [
         path: '/sign-up',
         name: 'sign-up',
         component: () => import('@/views/login/sign-up/index.vue')
+    },
+    {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('@/views/profile/index.vue')
+    },
+    {
+        path: '/setting',
+        name: 'setting',
+        component: () => import('@/views/setting/index.vue')
+    },
+    {
+        path: '/project',
+        name: 'project',
+        component: () => import('@/views/project/index.vue')
+    },
+    {
+        path: '/organization',
+        name: 'organization',
+        component: () => import('@/views/organization/index.vue')
+    },
+    {
+        path: '/collection',
+        name: 'collection',
+        component: () => import('@/views/collection/index.vue')
     }
 ]
 

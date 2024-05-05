@@ -8,6 +8,10 @@ const requests = axios.create({
 // 拦截器
 requests.interceptors.request.use(
     config => {
+        const authorization = localStorage.getItem('Authorization');
+        if (authorization) {
+            config.headers['Authorization'] = authorization;
+        }
         return config;
     }
 );

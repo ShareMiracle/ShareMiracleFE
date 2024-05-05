@@ -16,12 +16,15 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 
-import Navigation from '@/components/navigation';
-
 import * as initialise from "@/hook/initialize/App";
+import { registerKLoading } from '@/hook/utils/window';
+
+import Navigation from '@/components/navigation/index.vue';
+
 
 onMounted(async () => {
     initialise.setGlobalCssProperty();
+    registerKLoading();
 });
 </script>
 

@@ -85,11 +85,13 @@ const signUpForm = reactive({
 
         if (this.name.length === 0 || this.emailAddress.length === 0 || this.password.length === 0 || this.repeatPassword.length === 0) {
             this.errorInfo = t('signup.error.empty');
+            return;
         }
 
         const nodeList = document.querySelectorAll('.el-form-item__error');
         if (nodeList.length > 0) {
             this.errorInfo = t('signup.error.incorrect-item');
+            return;
         }
 
         const axiosRes = await apiUserRegister({

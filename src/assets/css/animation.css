@@ -76,3 +76,30 @@
     transform: translateY(-100px);
     opacity: 0%;
 }
+
+.collapse-from-top-enter-active,
+.collapse-from-top-leave-active {
+    transition: var(--animation-3s);
+    -moz-transition: var(--animation-3s);
+    -webkit-transition: var(--animation-3s);
+}
+
+.collapse-from-top-enter-from {
+    transform: scaleY(0);
+    transform-origin: center top;
+    opacity: 0%;
+}
+.collapse-from-top-leave-to {
+    transform: scaleY(0);
+    transform-origin: center top;
+    opacity: 0%;
+}
+
+@keyframes loading-mask {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}

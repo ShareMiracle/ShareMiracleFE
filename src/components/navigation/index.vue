@@ -6,7 +6,7 @@
 
         <div class="nav-item">
             <nav-search></nav-search>
-            <nav-login></nav-login>
+            <nav-user></nav-user>
             <span class="spliter"></span>
             <nav-language></nav-language>
         </div>
@@ -17,7 +17,7 @@
 
 import navMenu from './menu.vue';
 import navSearch from './search.vue';
-import navLogin from './login.vue';
+import navUser from './user/index.vue';
 import navLanguage from './language.vue';
 
 </script>

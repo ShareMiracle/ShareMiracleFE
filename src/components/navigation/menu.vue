@@ -23,27 +23,27 @@ interface RouteLinks {
 const menuLinks: RouteLinks[] = [
     {
         path: "/",
-        icon: "iconfont icon-Home",
+        icon: "iconfont icon-home",
         text: "home",
     },
     {
         path: "/data",
-        icon: "iconfont icon-data1",
+        icon: "iconfont icon-data",
         text: "data",
     },
     {
         path: "/model",
-        icon: "iconfont icon-moxing",
+        icon: "iconfont icon-model",
         text: "model",
     },
     {
         path: "/visualization",
-        icon: "iconfont icon-data",
+        icon: "iconfont icon-visualization",
         text: "visualization",
     },
     {
         path: "/about",
-        icon: "iconfont icon-contactus",
+        icon: "iconfont icon-about-us",
         text: "about",
     },
 ];

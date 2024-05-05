@@ -21,7 +21,6 @@
             "@/*": [
                 "src/*"
             ],
-            "vuex": ["./node_modules/vuex/types"]
         },
         "lib": [
             "esnext",

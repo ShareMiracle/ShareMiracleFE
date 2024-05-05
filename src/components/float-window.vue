@@ -8,16 +8,13 @@
             <slot name="header"></slot>
         </div>
         <Transition :name="props.animation">
-            <div v-show="!contentController.hidden" 
+            <div v-show="!contentController.hidden"
+                :class="props.contentClass" 
+                style="position: absolute;" 
                 @mouseover="contentController.show"
                 @mouseleave="contentController.hide"
             >
-                <div 
-                    :class="props.contentClass" 
-                    style="position: absolute;" 
-                >
-                    <slot name="content"></slot>
-                </div>
+                <slot name="content"></slot>
             </div>
         </Transition>
     </button>

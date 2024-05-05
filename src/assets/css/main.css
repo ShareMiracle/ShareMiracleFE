@@ -23,18 +23,32 @@
     --quote-tag-font-size: 1.1em;
     --quote-lineheight: 33px;
     --monospace-font: 'Cascadia code';
-    --sidebar-font-color: black;
-    --main-panel-font-color: black;
+
+    --normal-font-color-1: #1f2328;
+    --normal-font-color-3: #636c76;
+    --sidebar-font-color: #1f2328;
+    --main-panel-font-color: #1f2328;
     --light-font-color: rgb(127, 136, 143);
 
     --animation-7s: .7s cubic-bezier(0.23, 1, 0.32, 1);
     --animation-5s: .5s cubic-bezier(0.23, 1, 0.32, 1);
     --animation-3s: .35s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-1s: .1s cubic-bezier(0.23, 1, 0.32, 1);
     --gray-box-shadow-0: 0 0 8px 3px rgba(182, 181, 182, 0.9);
+
+    --normal-border-color: #dcdfe6;
 
     --error-border-color: rgb(254, 226, 226);
     --error-bg-color: rgb(254, 242, 242);
     --error-font-color: rgb(147, 33, 33);
+
+    --text-body-size-small: 0.75rem;
+    --text-body-size-medium: 0.875rem;
+    --text-body-size-large: 1rem;
+
+
+    --profile-avatar-sidebar-width: 300px;
+        
 }
 
 @font-face {
@@ -117,4 +131,8 @@ span,
 button,
 a {
     font-family: var(--base-font);
+}
+
+#random-avatar-gen {
+    display: none;
 }
