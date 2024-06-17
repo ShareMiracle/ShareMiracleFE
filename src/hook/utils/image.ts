@@ -1,6 +1,6 @@
 export function isImageUrl(url: string): Promise<boolean> {
     const image = new Image();
-    return new Promise((resolve, _) => {
+    return new Promise((resolve) => {
         image.onload = () => resolve(true);
         image.onerror = () => resolve(false);
         image.src = url;

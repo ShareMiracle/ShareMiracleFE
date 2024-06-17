@@ -18,6 +18,6 @@ import Avatar from './avatar.vue';
 
 // 挂载后先进行登录
 onMounted(async () => {
-    const res = await reqUserInfo();
+    await reqUserInfo();
 });
 </script>

@@ -35,6 +35,7 @@
     --animation-3s: .35s cubic-bezier(0.23, 1, 0.32, 1);
     --animation-1s: .1s cubic-bezier(0.23, 1, 0.32, 1);
     --gray-box-shadow-0: 0 0 8px 3px rgba(182, 181, 182, 0.9);
+    --gray-box-shadow-1: 0 0 25px 3px rgba(182, 181, 182, 0.3);
 
     --normal-border-color: #dcdfe6;
 
@@ -46,9 +47,7 @@
     --text-body-size-medium: 0.875rem;
     --text-body-size-large: 1rem;
 
-
     --profile-avatar-sidebar-width: 300px;
-        
 }
 
 @font-face {

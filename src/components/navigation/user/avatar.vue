@@ -21,7 +21,7 @@
                 </div>
                 <br>
                 <div>
-                    <div v-for="item of functions" :key="item.name">
+                    <div v-for="item of functions.items" :key="item.name">
                         <div class="function-item">
                             <div @click="item.clickFn">
                                 <span :class="item.iconClass"></span>
@@ -43,7 +43,7 @@ import { useI18n } from 'vue-i18n';
 
 import { ElNotification } from 'element-plus';
 
-import { UserStatus, reqLogout, getUserLogoUrl } from '@/store/user';
+import { UserStatus, reqLogout, getUserLogoUrl, reqUserInfo } from '@/store/user';
 import { KLoading } from '@/hook/utils/window';
 
 import floatWindow from '@/components/float-window.vue';
@@ -64,65 +64,83 @@ const avatar = reactive({
 
 onMounted(async() => {
     await avatar.updateSrc();
+    // 根据条件判断是否出现后台管理
+    if (UserStatus.status && UserStatus.name === 'admin001') {
+        const lastEl = functions.items.at(-1);
+        if (lastEl) {
+            lastEl.showhr = true;
+        }
+
+        functions.items.push({
+            name: 'user.background-management',
+            iconClass: 'iconfont icon-setting',
+            showhr: false,
+            clickFn: () => {
+                router.push('/background-management');
+            }
+        });
+    }
 });
 
-const functions = [
-    {
-        name: 'profile',
-        iconClass: 'iconfont icon-account',
-        showhr: true,
-        clickFn: () => {
-            router.push('/profile');
-        }
-    },
-    {
-        name: 'project',
-        iconClass: 'iconfont icon-project',
-        showhr: false,
-        clickFn: () => {
-            router.push('/project');
-        }
-    },
-    {
-        name: 'organization',
-        iconClass: 'iconfont icon-organization',
-        showhr: false,
-        clickFn: () => {
-            router.push('/organization');
-        }
-    },
-    {
-        name: 'collection',
-        iconClass: 'iconfont icon-collection',
-        showhr: true,
-        clickFn: () => {
-            router.push('/collection');
-        }
-    },
-    {
-        name: 'setting',
-        iconClass: 'iconfont icon-setting',
-        showhr: true,
-        clickFn: () => {
-            router.push('/setting');
-        }
-    },
-    {
-        name: 'logout',
-        iconClass: 'iconfont icon-logout',
-        showhr: false,
-        clickFn: async() => {
-            const loading = new KLoading({
-                background: 'rgba(0, 0, 0, 0.75)'
-            });
-            const res = await reqLogout();
-            loading.close();
-            if (res.data === 'logout.success.exit') {
-                ElNotification({title: t(res.data)});
+const functions = reactive({
+    items: [
+        {
+            name: 'profile',
+            iconClass: 'iconfont icon-account',
+            showhr: true,
+            clickFn: () => {
+                router.push('/profile');
+            }
+        },
+        {
+            name: 'project',
+            iconClass: 'iconfont icon-project',
+            showhr: false,
+            clickFn: () => {
+                router.push('/project');
+            }
+        },
+        {
+            name: 'organization',
+            iconClass: 'iconfont icon-organization',
+            showhr: false,
+            clickFn: () => {
+                router.push('/organization');
+            }
+        },
+        {
+            name: 'collection',
+            iconClass: 'iconfont icon-collection',
+            showhr: true,
+            clickFn: () => {
+                router.push('/collection');
+            }
+        },
+        {
+            name: 'setting',
+            iconClass: 'iconfont icon-setting',
+            showhr: true,
+            clickFn: () => {
+                router.push('/setting');
+            }
+        },
+        {
+            name: 'logout',
+            iconClass: 'iconfont icon-logout',
+            showhr: false,
+            clickFn: async() => {
+                const loading = new KLoading({
+                    background: 'rgba(0, 0, 0, 0.75)'
+                });
+                const res = await reqLogout();
+                loading.close();
+                if (res.data === 'logout.success.exit') {
+                    ElNotification({title: t(res.data)});
+                }
             }
         }
-    }
-];
+    ]
+})
 
 </script>
 

@@ -61,6 +61,18 @@ const routes: Array<RouteRecordRaw> = [
         path: '/collection',
         name: 'collection',
         component: () => import('@/views/collection/index.vue')
+    },
+    {
+        path: '/background-management',
+        name: 'background-management',
+        component: () => import('@/views/background-management/index.vue'),
+        children: [
+            {
+                path: 'meta-data',
+                name: 'meta-data',
+                component: () => import('@/views/background-management/meta-data/index.vue')
+            }
+        ]
     }
 ]
 

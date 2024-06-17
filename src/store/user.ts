@@ -33,8 +33,13 @@ export const UserStatus = reactive<IUserStatus>({
 });
 
 export async function reqUserLogin(req: apiUserLoginRequest) {
+    console.log(req);
+    
     const axiosRes = await apiUserLogin(req);
+    console.log(axiosRes);
+
     const res = axiosRes.data;
+    
     if (res.data) {
         UserStatus.username = res.data.userName;
         UserStatus.email = res.data.userName;
