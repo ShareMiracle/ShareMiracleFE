@@ -1,14 +1,25 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4343986 */
-  src: url('iconfont.woff2?t=1714761878801') format('woff2');
+  src: url('iconfont.woff2?t=1718713266534') format('woff2');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-finished:before {
+  content: "\e630";
+}
+
+.icon-unfinished:before {
+  content: "\e6a9";
+}
+
+.icon-modify-time:before {
+  content: "\e613";
 }
 
 .icon-project:before {

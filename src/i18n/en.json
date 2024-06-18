@@ -67,5 +67,21 @@
     "bm.meta-data.unnamed": "未命名",
     "bm.meta-data.last-modify": "上一次修改",
     "bm.meta-data.unchecked": "未检查",
-    "bm.meta-data.check": "检查完成"
+    "bm.meta-data.finish-check": "检查完成",
+    "bm.meta-data.createtime": "创建时间",
+    "bm.meta-data.uncertain": "不确定",
+    "bm.meta-data.update": "更新",
+    "bm.meta-data.reset": "重置",
+    "bm.meta-data.validation.name.no-empty": "数据集名字不能为空",
+    "bm.meta-data.validation.origin_url.no-empty": "数据集链接不能为空",
+    "bm.meta-data.validation.description.no-empty": "数据集介绍不能为空",
+    "bm.meta-data.delete": "删除",
+    "bm.confirm.content": "你的操作会删除当前数据集的元信息，确认吗？",
+    "bm.confirm.title": "警告",
+    "bm.confirm.confirmButtonText": "确认",
+    "bm.confirm.cancelButtonText": "取消",
+    "bm.upload.success": "更新成功",
+    "bm.upload.fail": "更新失败",
+    "bm.delete.success": "删除成功",
+    "bm.delete.fail": "删除失败"
 }

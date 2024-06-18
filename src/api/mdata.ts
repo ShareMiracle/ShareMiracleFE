@@ -11,9 +11,29 @@ export const apiGetAllMetaManageData = () => r<CommonResponse<apiGetAllMetaManag
 });
 
 
-export const apiGetDataMetaById = (req: apiGetDataMetaRequestById) => r<CommonResponse<apiGetDataMetaDataById>>({
-    url: '', method: '',
-    
+export const apiGetDataMetaById = (req: apiGetDataMetaRequestById) => r<CommonResponse<MdataMetaSchema>>({
+    url: '/mdata/get-mdata-meta-by-id', method: 'POST',
+    data: req
+});
+
+export const apiAddMdataMeta = (req: MdataMetaSchema) => r<CommonResponse<string>>({
+    url: '/mdata/get-mdata-meta-by-id', method: 'POST',
+    data: req
+});
+
+export const apiModifyMdataMeta = (req: MdataMetaSchema) => r<CommonResponse<string>>({
+    url: '/mdata/modify-mdata-meta-by-id', method: 'POST',
+    data: req
+});
+
+export const apiDeleteMdataMeta = (req: apiDeleteDataMetaRequestById) => r<CommonResponse<string>>({
+    url: '/mdata/delete-mdata-meta-by-id', method: 'DELETE',
+    data: req
+});
+
+export const apiUpdateMdataManagementInfo = (req: MetaManageDataItem) => r<CommonResponse<string>>({
+    url: '/mdata/update-mdata-management-info', method: 'POST',
+    data: req
 });
 
 export interface MetaManageDataItem {
@@ -30,12 +50,16 @@ export interface apiGetDataMetaRequestById {
     id: number
 }
 
-export type apiGetDataMetaDataById = {
+export interface apiDeleteDataMetaRequestById {
+    id: number
+}
+
+export type MdataMetaSchema = {
     id: number,
     name: string | null,
     origin_url: string | null,
     description: string | null,
-    release_date: string,
+    release_date: Date | string,
     task_ids: number[],
     modality_ids: number[],
     organ_ids: number[],

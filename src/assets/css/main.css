@@ -36,6 +36,9 @@
     --animation-1s: .1s cubic-bezier(0.23, 1, 0.32, 1);
     --gray-box-shadow-0: 0 0 8px 3px rgba(182, 181, 182, 0.9);
     --gray-box-shadow-1: 0 0 25px 3px rgba(182, 181, 182, 0.3);
+    --transplant-main-color-1: rgba(16, 16, 16, 0.8);
+    --transplant-main-color-2: rgba(16, 16, 16, 0.1);
+    --transplant-main-color-3: rgba(16, 16, 16, 0.05);
 
     --normal-border-color: #dcdfe6;
 
@@ -48,6 +51,11 @@
     --text-body-size-large: 1rem;
 
     --profile-avatar-sidebar-width: 300px;
+    --status-color-green: #6DC45F;
+    --status-color-yellow: #dbdb21;
+    --status-color-red: #f74a4a;
+    --status-color-purple: #801EFF;
+
 }
 
 @font-face {
@@ -134,4 +142,10 @@ a {
 
 #random-avatar-gen {
     display: none;
+}
+
+.m-flex-center {
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }
