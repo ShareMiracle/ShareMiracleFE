@@ -94,8 +94,9 @@
                                 multiple
                                 collapse-tags
                                 collapse-tags-tooltip
-                                placeholder="Task ids"
-                                >
+                                :max-collapse-tags="3"
+                                style="width: 100%;"
+                            >
                                 <el-option
                                     v-for="item in taskOptions"
                                     :key="item.value"
@@ -110,8 +111,9 @@
                                 multiple
                                 collapse-tags
                                 collapse-tags-tooltip
-                                placeholder="Task ids"
-                                >
+                                :max-collapse-tags="3"
+                                style="width: 100%;"
+                            >
                                 <el-option
                                     v-for="item in modalityOptions"
                                     :key="item.value"
@@ -126,8 +128,9 @@
                                 multiple
                                 collapse-tags
                                 collapse-tags-tooltip
-                                placeholder="Task ids"
-                                >
+                                :max-collapse-tags="3"
+                                style="width: 100%;"
+                            >
                                 <el-option
                                     v-for="item in organOptions"
                                     :key="item.value"
@@ -302,9 +305,9 @@ const mdataForm = reactive<MdataMetaSchema>({
     origin_url: '',
     description: '',
     release_date: new Date(),
-    task_ids: [],
-    modality_ids: [],
-    organ_ids: [],
+    task_ids: [0, 1],
+    modality_ids: [0, 1],
+    organ_ids: [2, 3],
     data_num: 0,
     label_num: 0,
     split_info: {
@@ -329,6 +332,8 @@ async function loadDataToForm(item: MetaManageDataItem) {
 
     const axiosRes = await apiGetDataMetaById({ id });
     const res = axiosRes.data;
+    console.log(res.data);
+    
     if (res.data) {
         mdataForm.id = res.data.id || 0;
         mdataForm.name = res.data.name || '';
@@ -392,10 +397,6 @@ async function submitItem() {
         const axiosManageMdataRes = await apiUpdateMdataManagementInfo(statusPayload);
         const manageMdataRes = axiosManageMdataRes.data;
 
-        console.log(mdataRes);
-        console.log(manageMdataRes);
-        
-        
 
         if (mdataRes.data && mdataRes.data.includes('success') &&
             manageMdataRes.data && manageMdataRes.data.includes('success')) {

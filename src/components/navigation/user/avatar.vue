@@ -65,7 +65,7 @@ const avatar = reactive({
 onMounted(async() => {
     await avatar.updateSrc();
     // 根据条件判断是否出现后台管理
-    if (UserStatus.status && UserStatus.name === 'admin001') {
+    if (UserStatus.status && UserStatus.name?.includes('admin')) {
         const lastEl = functions.items.at(-1);
         if (lastEl) {
             lastEl.showhr = true;

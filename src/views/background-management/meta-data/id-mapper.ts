@@ -150,7 +150,7 @@ function makeElementPlusOptions(object: Record<string, string>): OptionItem[] {
     const options = [];
     for (const key of Object.keys(object)) {
         options.push({
-            value: key,
+            value: parseInt(key),
             label: object[key]
         });
     }
@@ -160,4 +160,9 @@ function makeElementPlusOptions(object: Record<string, string>): OptionItem[] {
 export const taskOptions = makeElementPlusOptions(taskIds);
 export const modalityOptions = makeElementPlusOptions(modalityIds);
 export const organOptions = makeElementPlusOptions(organIds);
+
+console.log(taskOptions);
+console.log(modalityOptions);
+console.log(organOptions);
+
 
