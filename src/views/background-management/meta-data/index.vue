@@ -341,6 +341,8 @@ async function loadDataToForm(item: MetaManageDataItem) {
         mdataForm.description = res.data.description || '';
         mdataForm.release_date = res.data.release_date || '';
 
+        console.log(mdataForm.release_date);
+        
         if (typeof mdataForm.release_date === 'string' && mdataForm.release_date.length > 0) {
             mdataForm.release_date = new Date(parseInt(mdataForm.release_date));
         }
@@ -381,7 +383,7 @@ async function submitItem() {
     if (finalValid) {
         const mdataPayload: MdataMetaSchema = Object.assign({}, mdataForm);
         if (typeof mdataPayload.release_date !== 'string') {
-            mdataPayload.release_date = mdataPayload.release_date.toString();
+            mdataPayload.release_date = mdataPayload.release_date.getTime().toString();
         }
 
         const statusPayload = {
