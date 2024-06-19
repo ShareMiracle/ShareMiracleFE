@@ -222,7 +222,7 @@ import { useI18n } from 'vue-i18n';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import type { FormInstance } from 'element-plus';
 
-import { taskOptions, modalityOptions, organOptions } from './id-mapper';
+import { taskOptions, modalityOptions, organOptions } from '@/hook/mdata/id-mapper';
 
 import { MetaManageDataItem, apiGetDataMetaById, MdataMetaSchema, apiDeleteMdataMeta, apiModifyMdataMeta, apiUpdateMdataManagementInfo } from '@/api/mdata';
 import { reqGetAllMetaManageData, MetaDataManage, MetaDataManageVisibleMapper } from '@/store/mdata';

@@ -1,8 +1,7 @@
 <template>
     <span><img class="nav-icon" src="@/assets/image/data.png" /></span>
-    &ensp;
-    <hr />
-    &ensp;
+    <span class="nav-title">ShareMiracle</span>
+    <el-divider direction="vertical" />
     <router-link class="nav-router-item" v-for="(item, index) in menuLinks" :key="index" :to="item.path">
         <span class="nav-tag" :class="item.icon">&ensp; {{ t(item.text) }}
         </span>
@@ -58,6 +57,13 @@ const menuLinks: RouteLinks[] = [
 
 .nav-icon {
     max-height: 32px;
+    margin-top: 5px;
+}
+
+.nav-title {
+    max-height: 32px;
+    font-size: 1.3rem;
+    margin-left: 10px;
 }
 
 </style>

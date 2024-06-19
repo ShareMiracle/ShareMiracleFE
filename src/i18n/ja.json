@@ -83,5 +83,8 @@
     "bm.upload.success": "更新成功",
     "bm.upload.fail": "更新失败",
     "bm.delete.success": "删除成功",
-    "bm.delete.fail": "删除失败"
+    "bm.delete.fail": "删除失败",
+    "mdata.filter.task": "任务",
+    "mdata.filter.modality": "模态",
+    "mdata.filter.organ": "器官"
 }

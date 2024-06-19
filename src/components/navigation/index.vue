@@ -7,7 +7,7 @@
         <div class="nav-item">
             <nav-search></nav-search>
             <nav-user></nav-user>
-            <span class="spliter"></span>
+            <el-divider direction="vertical" />
             <nav-language></nav-language>
         </div>
     </nav>
