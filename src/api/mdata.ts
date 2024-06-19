@@ -37,8 +37,8 @@ export const apiUpdateMdataManagementInfo = (req: MetaManageDataItem) => r<Commo
 });
 
 export const apiSearchMetaInfo = (req: apiSearchMetaInfoRequest) => r<CommonResponse<apiSearchMetaInfoData>>({
-    url: '', method: '',
-
+    url: '/mdata/search-meta-info', method: 'POST',
+    data: req
 });
 
 export interface apiSearchMetaInfoRequest {

@@ -123,12 +123,12 @@ taskOptions.forEach(option => taskIdsManagement.id2selected[option.value] = fals
 modalityOptions.forEach(option => modalityIdsManagement.id2selected[option.value] = false);
 organOptions.forEach(option => organIdsManagement.id2selected[option.value] = false);
 
-
 </script>
 
 <style>
 
 .data-left {
+    width: 300px;
     border-radius: 1.0em;
     border: 2px solid var(--transplant-main-color-3);
     overflow: hidden;

@@ -86,5 +86,6 @@
     "bm.delete.fail": "删除失败",
     "mdata.filter.task": "任务",
     "mdata.filter.modality": "模态",
-    "mdata.filter.organ": "器官"
+    "mdata.filter.organ": "器官",
+    "search.fail": "搜索失败"
 }

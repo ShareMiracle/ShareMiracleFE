@@ -24,7 +24,6 @@ import dataRight from './right.vue';
 
 .data-body-wrapper {
     display: flex;
-    justify-content: space-around;
     min-height: 2000px;
 }
 
