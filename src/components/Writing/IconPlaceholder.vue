@@ -54,7 +54,6 @@ const imageStyle = computed(() => ({
 }
 
 .image-ph-description {
-    margin-top: -40px;
     width: 100%;
     text-align: center;
     font-size: 16px;

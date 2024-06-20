@@ -1,6 +1,6 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4343986 */
-  src: url('iconfont.woff2?t=1718846421854') format('woff2');
+  src: url('iconfont.woff2?t=1718895336003') format('woff2');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-down:before {
+  content: "\e688";
+}
+
+.icon-dataset-seach-description:before {
+  content: "\ed2f";
+}
+
+.icon-dataset-seach-title:before {
+  content: "\e888";
+}
+
+.icon-empty:before {
+  content: "\e621";
+}
+
 .icon-link:before {
   content: "\e6f7";
 }
@@ -19,7 +35,7 @@
   content: "\e697";
 }
 
-.icon-other:before {
+.icon-others:before {
   content: "\e66a";
 }
 

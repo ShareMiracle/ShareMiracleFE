@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "15838582",
+      "name": "arrow-down-filling",
+      "font_class": "arrow-down",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    },
+    {
+      "icon_id": "490671",
+      "name": "dataset content",
+      "font_class": "dataset-seach-description",
+      "unicode": "ed2f",
+      "unicode_decimal": 60719
+    },
+    {
+      "icon_id": "36209397",
+      "name": "dataset title",
+      "font_class": "dataset-seach-title",
+      "unicode": "e888",
+      "unicode_decimal": 59528
+    },
+    {
+      "icon_id": "9512564",
+      "name": "空",
+      "font_class": "empty",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
       "icon_id": "240305",
       "name": "link",
       "font_class": "link",
@@ -22,7 +50,7 @@
     {
       "icon_id": "573856",
       "name": "其他",
-      "font_class": "other",
+      "font_class": "others",
       "unicode": "e66a",
       "unicode_decimal": 58986
     },

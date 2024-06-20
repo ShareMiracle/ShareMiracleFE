@@ -18,11 +18,18 @@
                             {{ dataset.name }}
                         </div>
                         <div class="dataset-description">
-                            <span>{{ dataset.description || 'no description' }}</span>
+                            {{ dataset.description || 'no description' }}
+                        </div>
+                        <div class="dataset-datelink">
+                            <span class="dataset-date">
+                                <span class="iconfont icon-date"></span>
+                                {{ dataset.release_date || 'unknown' }}
+                            </span>
                             &emsp;
-                            <span>{{ dataset.release_date || 'unknown' }}</span>
-                            &emsp;
-                            <span>{{ dataset.origin_url || 'no url' }}</span>
+                            <span class="dataset-link">
+                                <span class="iconfont icon-link"></span>
+                                {{ dataset.origin_url || 'no url' }}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -31,9 +38,9 @@
                 <el-pagination
                     large
                     background
+                    @current-change="currentPageChange"
                     layout="prev, pager, next"
-                    :total="50"
-                    class="mt-4"
+                    :total="searchResults.page_num"
                 />
             </div>
         </el-main>
@@ -46,22 +53,25 @@
 <script setup lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 
-import { search, searchResults } from '@/store/search';
+import { search, searchManagement, searchResults, loading } from '@/store/search';
 import { loadingSvg } from '@/hook/utils/loading';
 
-
-
-const loading = ref(true);
 
 defineComponent({
     name: 'data-right'
 });
+
+async function currentPageChange(page_id: number) {
+    searchManagement.page_id = page_id - 1;
+    await search();
+}
 
 
 onMounted(async () => {
    await search();
    loading.value = false;
 });
+
 
 </script>
 
@@ -84,7 +94,6 @@ onMounted(async () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .search-result-item {
@@ -121,12 +130,49 @@ onMounted(async () => {
 }
 
 .dataset-title {
-    font-size: 1.0rem;
+    font-size: 1.05rem;
 }
 
 .dataset-description {
     font-size: 0.9rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 550px;
     color: var(--transplant-main-color-1);
 }
+
+.dataset-datelink {
+    font-size: 0.8rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 550px;
+    color: var(--transplant-main-color-1);
+}
+
+.dataset-date {
+    font-size: 0.8rem;
+}
+
+.dataset-link {
+    font-size: 0.8rem;
+    width: fit-content;
+}
+
+.dataset-link:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dataset-date .icon-date {
+    font-size: 12px;
+}
+
+.dataset-link .icon-link {
+    font-size: 12px;
+}
+
 
 </style>

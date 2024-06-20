@@ -104,5 +104,9 @@
     "modality.ultrasonic": "超声",
     "modality.wsi": "WSI",
     "modality.ehr": "电子病历",
-    "modality.biomarker": "生物标志物"
+    "modality.biomarker": "生物标志物",
+    "mdata.search.search-by-name": "通过数据集名字搜索",
+    "mdata.search.search-by-description": "通过描述来搜索",
+    "mdata.search.history": "历史搜索",
+    "mdata.search.no-history": "暂时没有搜索记录"
 }

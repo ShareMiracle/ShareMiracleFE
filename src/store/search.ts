@@ -1,4 +1,4 @@
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 
 import { apiSearchMetaInfo, apiSearchMetaInfoData } from '@/api/mdata';
 import { ElMessage } from 'element-plus';
@@ -6,6 +6,9 @@ import { ElMessage } from 'element-plus';
 import i18n from '@/i18n/i18n';
 
 const { t } = i18n.global;
+
+export const loading = ref(true);
+
 export interface searchDescription {
     /**
      * 数据集的描述信息
@@ -60,6 +63,7 @@ export const searchResults = reactive<apiSearchMetaInfoData>({
 });
 
 export async function search() {
+    loading.value = true;
     const axiosRes = await apiSearchMetaInfo(searchManagement);
     const res = axiosRes.data;
     if (res.msg && res.msg.includes('success')) {
@@ -68,4 +72,5 @@ export async function search() {
     } else {
         ElMessage({ message: t('search.fail'), type: 'error' });
     }
+    loading.value = false;
 }

@@ -81,9 +81,14 @@ const taskIdsManagement = reactive<IdsManagement>({
         const taskIds = new Set(searchManagement.task_ids);
         if (taskIds.has(item.value)) {
             taskIds.delete(item.value);
+        } else {
+            taskIds.add(item.value);
         }
+        
         searchManagement.task_ids = [...taskIds];
-
+        console.log(taskIds);
+        console.log('current task ids' + searchManagement.task_ids);
+        
         search();
     }
 });
