@@ -1,6 +1,11 @@
 <template>
     <div class="data-right">
-        <div class="search-result-wrapper">
+        <el-main
+            class="search-result-wrapper"
+            v-loading="loading"
+            element-loading-svg-view-box="-10, -10, 50, 50"
+            :element-loading-svg="loadingSvg"
+        >
             <div class="search-result-container">
                 <div v-for="(dataset) in searchResults.datasets" :key="dataset.id"
                     class="search-result-item"
@@ -31,7 +36,7 @@
                     class="mt-4"
                 />
             </div>
-        </div>
+        </el-main>
         <div>
 
         </div>
@@ -39,9 +44,14 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 
 import { search, searchResults } from '@/store/search';
+import { loadingSvg } from '@/hook/utils/loading';
+
+
+
+const loading = ref(true);
 
 defineComponent({
     name: 'data-right'
@@ -49,7 +59,8 @@ defineComponent({
 
 
 onMounted(async () => {
-   search();
+   await search();
+   loading.value = false;
 });
 
 </script>

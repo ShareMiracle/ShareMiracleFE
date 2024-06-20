@@ -1,3 +1,7 @@
+import i18n from '@/i18n/i18n';
+
+const { t } = i18n.global;
+
 export const taskIds = {
     "0": "others",
     "1": "classification",
@@ -20,6 +24,29 @@ export const modalityIds = {
     "8": "ehr",
     "9": "biomarker"
 };
+
+export const taskIdLabel = [
+    t('task.others'),
+    t('task.classification'),
+    t('task.segmentation'),
+    t('task.detection'),
+    t('task.reconstruction'),
+    t('task.superresolution'),
+    t('task.registration'),
+]
+
+export const modalityIdLabel = [
+    t('modality.others'),
+    t('modality.common'),
+    t('modality.ct'),
+    t('modality.mri'),
+    t('modality.xray'),
+    t('modality.pet'),
+    t('modality.ultrasonic'),
+    t('modality.wsi'),
+    t('modality.ehr'),
+    t('modality.biomarker')
+];
 
 export const organIds = {
     "1": "脾",
@@ -142,18 +169,30 @@ export const organIds = {
 };
 
 interface OptionItem {
-    value: any,
+    value: number,
     label: string
 }
 
 function makeElementPlusOptions(object: Record<string, string>): OptionItem[] {
     const options = [];
+    let othersKey = '';
     for (const key of Object.keys(object)) {
+        if (object[key] === 'others') {
+            othersKey = key;
+            continue;
+        }
         options.push({
             value: parseInt(key),
             label: object[key]
         });
     }
+    if (othersKey.length > 0) {
+        options.push({
+            value: parseInt(othersKey),
+            label: object[othersKey]
+        });
+    }
+
     return options;
 }
 

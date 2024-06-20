@@ -10,7 +10,8 @@
                     :class="{ 'data-search-filter-container-active': taskIdsManagement.id2selected[item.value] }"
                     @click="taskIdsManagement.click(item)"
                 >
-                    {{ item.label }}
+                    <span :class="'iconfont icon-' + item.label"></span>
+                    {{ taskIdLabel[item.value] }}
                 </div>
             </div>
             </k-pane>
@@ -23,7 +24,8 @@
                     :class="{ 'data-search-filter-container-active': modalityIdsManagement.id2selected[item.value] }"
                     @click="modalityIdsManagement.click(item)"
                 >
-                    {{ item.label }}
+                    <span :class="'iconfont icon-' + item.label"></span>
+                    {{ modalityIdLabel[item.value] }}
                 </div>
             </div>
             </k-pane>
@@ -48,7 +50,7 @@
 import { defineComponent, reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import { taskOptions, modalityOptions, organOptions } from '@/hook/mdata/id-mapper';
+import { taskOptions, modalityOptions, organOptions, taskIdLabel, modalityIdLabel } from '@/hook/mdata/id-mapper';
 import { search, searchManagement } from '@/store/search';
 
 import KTabs from '@/components/Writing/KTabs.vue';
@@ -138,14 +140,38 @@ organOptions.forEach(option => organIdsManagement.id2selected[option.value] = fa
 .data-left-pane {
     margin-top: 5px;
     padding: 10px;
+    overflow-y: scroll;
+    max-height: 85vh;
 }
 
+.data-left-pane::-webkit-scrollbar {
+    width: 15px;
+}
+
+.data-left-pane::-webkit-scrollbar-track {
+    background: var(0, 0, 0, 0.1);
+}
+
+.data-left-pane::-webkit-scrollbar-thumb {
+    background: var(--main-fill-color);
+    border-radius: .3em;
+}
+
+
+
 .data-search-filter-container {
+    display: flex;
+    align-items: center;
     padding: 5px 8px;
     margin: 2px;
     border-radius: .5em;
     cursor: pointer;
     transition: var(--animation-5s);
+}
+
+.data-search-filter-container .iconfont {
+    margin-right: 7px;
+    font-size: 13px;
 }
 
 .data-search-filter-container:hover {

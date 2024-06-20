@@ -87,5 +87,22 @@
     "mdata.filter.task": "任务",
     "mdata.filter.modality": "模态",
     "mdata.filter.organ": "器官",
-    "search.fail": "搜索失败"
+    "search.fail": "搜索失败",
+    "task.others": "其他",
+    "task.classification": "图像分类",
+    "task.segmentation": "图像分割",
+    "task.detection": "目标检测",
+    "task.reconstruction": "图像重建",
+    "task.superresolution": "图像超分",
+    "task.registration": "图像配准",
+    "modality.others": "其他",
+    "modality.common": "常规",
+    "modality.ct": "CT",
+    "modality.mri": "MRI",
+    "modality.xray": "X光片",
+    "modality.pet": "PET",
+    "modality.ultrasonic": "超声",
+    "modality.wsi": "WSI",
+    "modality.ehr": "电子病历",
+    "modality.biomarker": "生物标志物"
 }
