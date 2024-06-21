@@ -26,6 +26,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { useI18n } from "vue-i18n";
 
 import { availableLanguage } from "@/i18n/schema";
@@ -37,7 +38,16 @@ const { t, locale } = useI18n();
 
 async function changeLanguage(langID: string) {
     locale.value = langID;
+    localStorage.setItem('lang', langID);
+    location.reload();
 }
+
+onMounted(async () => {
+    if (localStorage.getItem('lang')) {
+        locale.value = localStorage.getItem('lang');
+    }
+})
+
 </script>
 
 <style>

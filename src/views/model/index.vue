@@ -6,10 +6,17 @@
     <img src="https://kirigaya.cn/files/images/bird.png"/>
 </template>
 
-<script>
-export default {
+<script setup lang="ts">
+import { onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
-}
+
+onMounted(async () => {
+
+    document.title = 'MiracleShare - ' + t('model');
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 </script>
 
 <style>

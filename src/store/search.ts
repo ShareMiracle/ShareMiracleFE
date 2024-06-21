@@ -67,10 +67,13 @@ export async function search() {
     const axiosRes = await apiSearchMetaInfo(searchManagement);
     const res = axiosRes.data;
     if (res.msg && res.msg.includes('success')) {
-        searchResults.page_num = res.data?.page_num || 0;
+        const resPageNum = res.data?.page_num || -1;
+        if (resPageNum >= 0) {
+            searchResults.page_num = resPageNum;
+        }
         searchResults.datasets = res.data?.datasets || [];
     } else {
         ElMessage({ message: t('search.fail'), type: 'error' });
-    }
+    }    
     loading.value = false;
 }

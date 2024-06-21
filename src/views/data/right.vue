@@ -40,7 +40,7 @@
                     background
                     @current-change="currentPageChange"
                     layout="prev, pager, next"
-                    :total="searchResults.page_num"
+                    :page-count="searchResults.page_num"
                 />
             </div>
         </el-main>
@@ -64,12 +64,14 @@ defineComponent({
 async function currentPageChange(page_id: number) {
     searchManagement.page_id = page_id - 1;
     await search();
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 
 onMounted(async () => {
-   await search();
-   loading.value = false;
+    searchManagement.page_id = 0;
+    await search();
+    loading.value = false;
 });
 
 

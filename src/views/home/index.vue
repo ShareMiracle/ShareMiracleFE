@@ -49,8 +49,16 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
+
+
+onMounted(async () => {
+
+    document.title = 'MiracleShare - ' + t('home');
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 </script>
 

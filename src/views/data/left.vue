@@ -84,11 +84,12 @@ const taskIdsManagement = reactive<IdsManagement>({
         } else {
             taskIds.add(item.value);
         }
-        
+
         searchManagement.task_ids = [...taskIds];
         console.log(taskIds);
         console.log('current task ids' + searchManagement.task_ids);
         
+        searchManagement.page_id = 0;
         search();
     }
 });
@@ -105,6 +106,7 @@ const modalityIdsManagement = reactive<IdsManagement>({
         }
         searchManagement.modality_ids = [...modalityIds];
 
+        searchManagement.page_id = 0;
         search();
     }
 });
@@ -121,6 +123,7 @@ const organIdsManagement = reactive<IdsManagement>({
         }
         searchManagement.organ_ids = [...organIds];
 
+        searchManagement.page_id = 0;
         search();
     }
 });

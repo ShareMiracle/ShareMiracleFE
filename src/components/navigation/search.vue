@@ -76,7 +76,7 @@
                                 <div v-for="(item, index) of recommendBox.historyItems"
                                     :key="index"
                                     class="recommend-item"
-                                    @click="searchBox.search(item)"
+                                    @click="searchBox.search()"
                                 >{{ item }}</div>
                             </div>
                         </div>
@@ -196,6 +196,7 @@ const searchBox = reactive({
     async searchName() {
         console.log('[searchName]');
         searchManagement.name = this.searchContent;
+        searchManagement.page_id = 0;
         await search();
     },
     async searchDescription() {
@@ -245,6 +246,7 @@ const recommendBox = reactive<RecommendBox>({
     margin-right: 10px;
     position: relative;
     width: 360px;
+    height: 45px;
     border: 2px var(--main-color);
     border-radius: .9em;
     box-shadow: 0 0 0 1px var(--transplant-main-color-4);
