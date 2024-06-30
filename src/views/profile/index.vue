@@ -3,6 +3,7 @@
         <div class="profile-info">
             <profile-info></profile-info>
         </div>
+        <div class="margin-100"></div>
         <div class="profile-work">
             <profile-work></profile-work>
         </div>
@@ -32,6 +33,13 @@ onMounted(async () => {
 .profile-container {
     width: 800px;
     display: flex;
+    justify-content: space-around;
+}
+.profile-info {
+    flex-grow: 1;
 }
 
+.profile-work {
+    flex-grow: 2;
+}
 </style>

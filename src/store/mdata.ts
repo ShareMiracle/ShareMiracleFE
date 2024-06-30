@@ -12,8 +12,6 @@ export async function reqGetAllMetaManageData() {
     }
     const axiosRes = await apiGetAllMetaManageData();
     
-    console.log(axiosRes);
-    
     const res = axiosRes.data;
     if (res.msg?.includes('success') && res.data) {
         for (const data of res.data) {

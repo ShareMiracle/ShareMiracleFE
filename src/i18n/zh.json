@@ -108,5 +108,8 @@
     "mdata.search.search-by-name": "通过数据集名字搜索",
     "mdata.search.search-by-description": "通过描述来搜索",
     "mdata.search.history": "历史搜索",
-    "mdata.search.no-history": "暂时没有搜索记录"
+    "mdata.search.no-history": "暂时没有搜索记录",
+    "profile.dataset": "我的数据",
+    "profile.model": "我的模型",
+    "profile.task": "我的任务"
 }

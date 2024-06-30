@@ -108,5 +108,8 @@
     "mdata.search.search-by-name": "Search by dataset name",
     "mdata.search.search-by-description": "Search by description",
     "mdata.search.history": "Search history",
-    "mdata.search.no-history": "No search history at the moment"
+    "mdata.search.no-history": "No search history at the moment",
+    "profile.dataset": "我的数据",
+    "profile.model": "我的模型",
+    "profile.task": "我的任务"
 }
