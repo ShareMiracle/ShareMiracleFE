@@ -24,7 +24,7 @@ defineComponent({
 });
 
 onMounted(async () => {
-    document.title = 'MiracleShare - ' + t('profile');
+    document.title = 'ShareMiracle - ' + t('profile');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>

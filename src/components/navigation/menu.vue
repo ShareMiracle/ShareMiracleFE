@@ -1,5 +1,5 @@
 <template>
-    <span><img class="nav-icon" src="@/assets/image/data.png" /></span>
+    <span><img class="nav-icon" src="@/assets/image/database.svg" /></span>
     <span class="nav-title">ShareMiracle</span>
     <el-divider direction="vertical" />
     <router-link class="nav-router-item" v-for="(item, index) in menuLinks" :key="index" :to="item.path">
@@ -64,6 +64,7 @@ const menuLinks: RouteLinks[] = [
     max-height: 32px;
     font-size: 1.3rem;
     margin-left: 10px;
+    user-select: none;
 }
 
 </style>

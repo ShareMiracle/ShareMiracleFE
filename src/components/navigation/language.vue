@@ -29,6 +29,8 @@
 import { onMounted } from 'vue';
 import { useI18n } from "vue-i18n";
 
+
+
 import { availableLanguage } from "@/i18n/schema";
 
 import floatWindow from "@/components/float-window.vue";
@@ -44,9 +46,9 @@ async function changeLanguage(langID: string) {
 
 onMounted(async () => {
     if (localStorage.getItem('lang')) {
-        locale.value = localStorage.getItem('lang');
+        locale.value = localStorage.getItem('lang') || 'zh-cn';
     }
-})
+});
 
 </script>
 
@@ -116,8 +118,10 @@ onMounted(async () => {
 
 .nav-i18n {
     cursor: pointer;
-    border-radius: .6em;
-    padding: var(--nav-block-padding);}
+    border-radius: 0.375rem;
+    padding: var(--nav-block-padding);
+    border: solid 1px var(--main-border-color-1);
+}
 
 .nav-i18n:hover {
     color: var(--main-color);

@@ -33,7 +33,7 @@
             "});",
             "",
             "onMounted(async () => {",
-            "\tdocument.title = 'MiracleShare - ' + t('');",
+            "\tdocument.title = 'ShareMiracle - ' + t('');",
             "\twindow.scrollTo({ top: 0, behavior: 'smooth' });",
             "});",
             "</script>",

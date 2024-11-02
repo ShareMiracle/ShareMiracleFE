@@ -1,13 +1,30 @@
 @font-face {
   font-family: "iconfont"; /* Project id 4343986 */
-  src: url('iconfont.woff2?t=1718895417035') format('woff2');
+  src: url('iconfont.woff2?t=1730559702556') format('woff2');
 }
 
 .iconfont {
   font-family: "iconfont" !important;
+  
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-baiduwangpan:before {
+  content: "\e9b8";
+}
+
+.icon-add:before {
+  content: "\e62c";
+}
+
+.icon-google-driver:before {
+  content: "\e651";
+}
+
+.icon-three-join:before {
+  content: "\e639";
 }
 
 .icon-arrow-down:before {

@@ -156,8 +156,8 @@ const functions = reactive({
 .avatar-container {
     height: 30px;
     width: 30px;
-    border-radius: 99em;
-    border: 1px solid var(--normal-border-color);
+    border-radius: 0.375rem;
+    border: 1px solid var(--main-border-color-1);
     cursor: pointer;
     overflow: hidden;
     transition: var(--animation-3s);

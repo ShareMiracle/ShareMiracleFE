@@ -16,6 +16,7 @@ import "@/assets/fonts/iconfont.css";
 import "@/assets/css/thirdparty.css";
 import "@/assets/css/patch.css";
 import "@/assets/css/animation.css";
+import "@/assets/css/row.css";
 
 createApp(App)
     .use(router)

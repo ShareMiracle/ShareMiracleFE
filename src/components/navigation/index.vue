@@ -6,9 +6,9 @@
 
         <div class="nav-item">
             <nav-search></nav-search>
-            <nav-user></nav-user>
-            <el-divider direction="vertical" />
+            <nav-add></nav-add>
             <nav-language></nav-language>
+            <nav-user></nav-user>
         </div>
     </nav>
 </template>
@@ -19,6 +19,9 @@ import navMenu from './menu.vue';
 import navSearch from './search.vue';
 import navUser from './user/index.vue';
 import navLanguage from './language.vue';
+import navAdd from './add.vue';
+
+
 
 </script>
 

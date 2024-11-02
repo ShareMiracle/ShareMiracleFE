@@ -111,5 +111,13 @@
     "mdata.search.no-history": "暂时没有搜索记录",
     "profile.dataset": "我的数据",
     "profile.model": "我的模型",
-    "profile.task": "我的任务"
+    "profile.task": "我的任务",
+    "info.data.datalink.unknown": "未知",
+    "info.data.datalink.no-url": "无链接",
+    "info.data.description.text": "没有描述",
+    "info.data.dataset-status.text": "公开",
+    "info.data.join-project.text": "加入项目",
+    "info.add.import.google-driver": "从 Google Driver 导入",
+    "info.add.import.baiduwangpan": "从百度网盘中导入",
+    "info.add.create.project": "创建项目"
 }

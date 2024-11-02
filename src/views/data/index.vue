@@ -18,7 +18,7 @@ const { t } = useI18n();
 
 onMounted(async () => {
 
-    document.title = 'MiracleShare - ' + t('data');
+    document.title = 'ShareMiracle - ' + t('data');
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
         
@@ -34,5 +34,6 @@ onMounted(async () => {
     display: flex;
     min-height: 2000px;
 }
+
 
 </style>

@@ -14,7 +14,7 @@ const { t } = useI18n();
 
 onMounted(async () => {
 
-    document.title = 'MiracleShare - ' + t('model');
+    document.title = 'ShareMiracle - ' + t('model');
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>

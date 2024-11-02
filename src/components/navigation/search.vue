@@ -97,7 +97,6 @@
                 </div>
             </transition>
         </div>
-
     </div>
 </template>
 
@@ -241,12 +240,16 @@ const recommendBox = reactive<RecommendBox>({
 </script>
 
 <style>
+:root {
+    --nav-item-height: 40px;
+}
+
 .search-box-container {
     padding: 0 10px;
     margin-right: 10px;
     position: relative;
     width: 360px;
-    height: 45px;
+    height: var(--nav-item-height);
     border: 2px var(--main-color);
     border-radius: .9em;
     box-shadow: 0 0 0 1px var(--transplant-main-color-4);

@@ -1,7 +1,7 @@
 // set i18n 
 import { createI18n } from 'vue-i18n';
 import en from './en.json';
-import zh from './zh.json';
+import zh from './zh-cn.json';
 import ja from './ja.json';
 type MessageSchema = typeof en
 
